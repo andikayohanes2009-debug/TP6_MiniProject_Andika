@@ -2,10 +2,8 @@ class TugasService(private val daftar: MutableList<Tugas>) {
 
     fun tambah(id: String, judul: String): Boolean {
         if (id.isBlank() || judul.isBlank()) return false
-
-        if (daftar.any { it.id.equals(id, ignoreCase = true) })
-            return false
-
+        if (id.contains(";") || judul.contains(";")) return false
+        if (daftar.any { it.id.equals(id.trim(), ignoreCase = true) }) return false
         daftar.add(Tugas(id.trim(), judul.trim()))
         return true
     }
