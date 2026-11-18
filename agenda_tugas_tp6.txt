@@ -1,3 +1,4 @@
 T05;Buatlah Game Flappy Bird;false
 T06;Buatlah Aplikasi Game Roblox;false
 T07;buatlah Prototype Game Hungry Shark;false
+T01;Mengerjakan PR;true
