@@ -41,10 +41,10 @@ fun main() {
             2 -> service.tampilkan()
 
             3 -> {
-                print("ID yang dicari: ")
-                val hasil = service.cari(readln())
-
-                println(hasil ?: "Tugas tidak ditemukan")
+                    print("ID yang dicari: ")
+                    val hasil = service.cari(readln())
+                    if (hasil == null) println("Tugas tidak ditemukan")
+                    else println("${hasil.id} | ${hasil.judul} | ${if (hasil.selesai) "Selesai" else "Belum"}")
             }
 
             4 -> {
